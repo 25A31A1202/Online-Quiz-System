@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Quiz System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .quiz-container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="quiz-container">
+        <h2>Online Quiz System</h2>
+
+        <div id="quiz">
+            <p>1. What does HTML stand for?</p>
+
+            <input type="radio" name="q1" value="a">
+            Hyper Text Markup Language<br>
+
+            <input type="radio" name="q1" value="b">
+            High Tech Modern Language<br>
+
+            <input type="radio" name="q1" value="c">
+            Hyper Transfer Markup Language<br>
+
+            <p>2. Which language is used for styling web pages?</p>
+
+            <input type="radio" name="q2" value="a">
+            HTML<br>
+
+            <input type="radio" name="q2" value="b">
+            CSS<br>
+
+            <input type="radio" name="q2" value="c">
+            Python<br>
+
+            <p>3. Which language is used for web page interactivity?</p>
+
+            <input type="radio" name="q3" value="a">
+            JavaScript<br>
+
+            <input type="radio" name="q3" value="b">
+            SQL<br>
+
+            <input type="radio" name="q3" value="c">
+            C++<br>
+
+            <button onclick="checkAnswers()">Submit Quiz</button>
+        </div>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+
+            let q1 = document.querySelector('input[name
